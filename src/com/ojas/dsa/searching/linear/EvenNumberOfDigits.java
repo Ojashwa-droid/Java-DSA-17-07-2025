@@ -5,7 +5,7 @@ package com.ojas.dsa.searching.linear;
 public class EvenNumberOfDigits {
     public static void main(String[] args) {
 
-        int[] nums = {12, 345, 2, 6, -7894, 0};
+        int[] nums = {12, 345, 2, 6, -7894};
         int result = EvenNumberOfDigits.findNumbers(nums);
         System.out.println(result);
     }
@@ -20,14 +20,18 @@ public class EvenNumberOfDigits {
 
         for (int i = 0; i < nums.length; i++) {
             int number = nums[i];
-            if (hasEvenDigits(number))
+            if (countDigits(number) % 2 == 0)
                 count++;
         }
 
         return count;
     }
 
-    private static boolean hasEvenDigits(int number) {
+    private static int countDigits(int number){
+        return (int) (Math.log10(number)  + 1);
+     }
+
+/*    private static boolean hasEvenDigits(int number) {
         int digits = 0;
 
         if (number < 0)
@@ -41,5 +45,5 @@ public class EvenNumberOfDigits {
             number = number / 10;
         }
         return digits % 2 == 0;
-    }
+    }*/
 }
