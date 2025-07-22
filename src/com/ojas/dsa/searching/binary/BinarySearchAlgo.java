@@ -10,25 +10,22 @@ public class BinarySearchAlgo {
 
     // Return the index of the item
     private static int binarySearch(int[] array, int target) {
-
         int start = 0;
         int end = array.length - 1;
 
         while (start <= end) {
-            // Find the middle element
-            //  int mid = (start + end) / 2; // There might be a possibility that (start + end) exceeds the int size --> throw in accurate value or give error
+            // Find the middle index to compare the values from
             int mid = start + (end - start) / 2;
 
-            if (target < array[mid]) {
-                end = mid - 1;
-            } else if (target > array[mid]) {
+            if (target > array[mid]){
                 start = mid + 1;
+            } else if (target < array[mid]) {
+                end = mid -1;
             } else {
                 return mid;
             }
-        }
 
-        // If the item is not found in the array -> returns -1
+        }
         return -1;
     }
 
