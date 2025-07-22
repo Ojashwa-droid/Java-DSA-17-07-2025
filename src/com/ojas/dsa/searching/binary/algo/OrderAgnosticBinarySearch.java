@@ -1,4 +1,4 @@
-package com.ojas.dsa.searching.binary;
+package com.ojas.dsa.searching.binary.algo;
 
 public class OrderAgnosticBinarySearch {
     public static void main(String[] args) {
