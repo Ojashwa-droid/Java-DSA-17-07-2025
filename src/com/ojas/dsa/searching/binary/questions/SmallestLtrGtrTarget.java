@@ -1,6 +1,6 @@
 package com.ojas.dsa.searching.binary.questions;
 
-// Leetcode: 744
+// LeetCode: 744
 public class SmallestLtrGtrTarget {
     public static void main(String[] args) {
         char[] letters = {'c', 'f', 'j'};
