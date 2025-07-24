@@ -1,6 +1,6 @@
 package com.ojas.dsa.searching.binary.questions;
 
-// LeetCode: 744
+// LeetCode: 744 https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 public class SmallestLtrGtrTarget {
     public static void main(String[] args) {
         char[] letters = {'c', 'f', 'j'};
