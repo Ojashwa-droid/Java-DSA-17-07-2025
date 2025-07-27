@@ -1,10 +1,10 @@
 package com.ojas.dsa.searching.binary.questions;
 
-public class RotatedBinarySeearch {
+public class RotatedBinarySearch {
     public static void main(String[] args) {
         int[] array = {3, 5, 1};
         System.out.println(findPivot(array));
-        System.out.println(RotatedBinarySeearch.search(array, 3));
+        System.out.println(RotatedBinarySearch.search(array, 3));
     }
 
     static int search(int[] array, int target) {
@@ -12,6 +12,7 @@ public class RotatedBinarySeearch {
         int pivot = findPivot(array);
 
         if (pivot == -1) {
+            // Not a rotated array --> do a simple binary search
             return pivotBS(array, target, 0, array.length -1);
         }
 
@@ -26,12 +27,12 @@ public class RotatedBinarySeearch {
             return pivotBS(array, target, pivot + 1, array.length - 1);
         }
 
-      /*  // Search in the first half of the array till pivot
-        int elementIndex = pivotBS(array, target, 0, pivot);
-        if (elementIndex != -1)
-            return elementIndex;
-
-        return pivotBS(array, target, pivot + 1, array.length -1);*/
+//        // Search in the first half of the array till pivot
+//        int elementIndex = pivotBS(array, target, 0, pivot);
+//        if (elementIndex != -1)
+//            return elementIndex;
+//
+//        return pivotBS(array, target, pivot + 1, array.length -1);
 
     }
 
@@ -49,7 +50,7 @@ public class RotatedBinarySeearch {
             } else if (mid > start && array[mid] < array[mid - 1]) {
                 // We are at the pivot
                 return mid - 1;
-            } else if (array[start] >= array[mid]) {
+            } else if (array[start] > array[mid]) {
                 // Elements smaller than start lie ahead of mid , so we can ignore them as we are finding the largest element
                 end = mid - 1;
             } else if (array[start] < array[mid]) {
