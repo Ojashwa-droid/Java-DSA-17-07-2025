@@ -2,7 +2,7 @@ package com.ojas.dsa.searching.binary.questions;
 
 import java.util.Arrays;
 
-// Leetcode: 34
+// Leetcode: 34 https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
 public class FirstAndLastPosition {
     public static void main(String[] args) {
         int[] nums = new int[]{5, 7, 7, 7, 7, 8, 8, 10};
