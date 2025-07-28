@@ -2,7 +2,10 @@ package com.ojas.dsa.searching.binary.questions;
 
 public class SplitArrayLargestSum {
     public static void main(String[] args) {
-
+        int[] nums = {7, 2, 5, 10, 8};
+        int m = 2;
+        int result = SplitArrayLargestSum.splitArray(nums, m);
+        System.out.println(result);
     }
 
     public static int splitArray(int[] nums, int m) {
