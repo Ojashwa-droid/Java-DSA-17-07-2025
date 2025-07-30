@@ -10,7 +10,6 @@ public class SortedMatrix {
                 {23, 30, 34, 50}
         };
         System.out.println(Arrays.toString(binarySearchInSortedMatrix(matrix, 10)));
-
     }
 
     public static int[] binarySearchInSortedMatrix(int[][] matrix, int target) {
