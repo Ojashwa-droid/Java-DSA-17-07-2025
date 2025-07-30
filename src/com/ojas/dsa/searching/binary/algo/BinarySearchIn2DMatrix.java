@@ -11,7 +11,7 @@ public class BinarySearchIn2DMatrix {
                 {28, 29, 37, 49},
                 {23, 34, 38, 50}
         };
-        int target = -35;
+        int target = 37;
         int[] result = BinarySearchIn2DMatrix.binarySearchInMatrix(matrix, target);
         System.out.println(Arrays.toString(result));
 
