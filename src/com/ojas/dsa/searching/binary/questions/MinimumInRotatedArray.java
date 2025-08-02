@@ -2,7 +2,7 @@ package com.ojas.dsa.searching.binary.questions;
 
 public class MinimumInRotatedArray {
     public static void main(String[] args) {
-        int[] array = {4, 5, 1,2,3};
+        int[] array = {4, 5, 1, 2, 3};
 //        int[] array = {0, 1, 2, 3, 4, 5, 6, 7};
         System.out.println(MinimumInRotatedArray.finMin2(array));
 
@@ -41,26 +41,25 @@ public class MinimumInRotatedArray {
     public static int finMin2(int[] array) {
         int start = 0;
         int end = array.length - 1;
-
         int ans = Integer.MAX_VALUE;
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
 
             // Find the sorted half
-            if (array[start] <= array[mid]){
+            if (array[start] <= array[mid]) {
                 // Sorted half found
                 // It may or may not contain the ans
-                if (array[start] < ans){
+                if (array[start] < ans) {
                     ans = array[start];
                 }
                 start = mid + 1;
             }
 
-            if (array[mid] <= array[end]){
+            if (array[mid] <= array[end]) {
                 // Right half is sorted
                 // May or may not contain the ans
-                if (array[mid] < ans){
+                if (array[mid] < ans) {
                     ans = array[mid];
                 }
                 end = mid - 1;
