@@ -3,6 +3,7 @@ package com.ojas.dsa.searching.binary.questions;
 public class NthRootOfGivenNumber {
     public static void main(String[] args) {
         System.out.println(nthRoot(16, 2));
+        System.out.println(nthRoot(65, 3));
     }
 
     public static int nthRoot(int number, int n) {
