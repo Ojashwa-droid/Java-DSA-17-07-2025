@@ -23,6 +23,8 @@ public class InsertionSortAlgo {
                 if (array[j] < array[j - 1]) {
                     // swap
                     swap(array, j, j - 1);
+                } else {
+                    break;
                 }
             }
         }
