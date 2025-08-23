@@ -28,8 +28,6 @@ class FindAllDuplicates {
                 list.add(nums[index]);
             }
         }
-
-
         return list;
     }
     public static void swap(int[] arr, int first, int second) {
