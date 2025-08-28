@@ -1,10 +1,15 @@
 package com.ojas.dsa.sorting.problems;
 
+import java.util.ArrayList;
+
 public class FirstMissingPositiveNumber {
 
     public static void main(String[] args) {
         int[] array = {1};
         System.out.println(firstMissingPositive(array));
+
+        System.out.println('a' + 'b');
+
 
     }
 
