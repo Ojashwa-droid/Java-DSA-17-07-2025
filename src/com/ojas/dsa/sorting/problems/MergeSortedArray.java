@@ -2,34 +2,42 @@ package com.ojas.dsa.sorting.problems;
 
 import java.util.Arrays;
 
+
+// Pending
+
 public class MergeSortedArray {
     public static void main(String[] args) {
-        int[] nums1 = {1, 2, 3, 0, 0, 0};
-        int[] nums2 = {2, 5, 6};
+        int[] nums1 = {4, 5, 6, 0, 0, 0};
+        int[] nums2 = {1, 2, 3};
         System.out.println(Arrays.toString(merge(nums1, 3, nums2, 3)));
 
     }
 
     public static int[] merge(int[] nums1, int m, int[] nums2, int n) {
-        int i = 0;
-        int j = 0;
-        while (i < nums1.length){
-            // if element at the 'i' pointer in nums1 is smaller or equal to element at 'j' in nums2
-            if (nums1[i] != 0 && nums1[i] <= nums2[j]){
+        if (nums2.length == 0) {
+            return nums1;
+        }
+        for (int i = 0, j = 0; i < m; ) {
+            if (nums1[i] > nums2[j]) {
+                // swap the numbers such that nums1 has the smaller number
+                swap(nums1, nums2, i, j);
+            } else if (nums1[i] <= nums2[j]) {
                 i++;
-            } else if (nums1[i] > nums2[j]) {
-                // swap the two elements
-                swap(nums1 ,nums2, i, j);
-            } else {
-                nums1[i] = nums2[j];
-                j++;
             }
         }
+
+        int j = 0;
+        for (int i = m; i < nums1.length; i++) {
+            nums1[i] = nums2[j];
+            j++;
+        }
+
         return nums1;
     }
-    public static void swap(int[] array1, int[] array2, int firstIndex, int secondIndex){
-        int temp = array1[firstIndex];
-        array1[firstIndex] = array2[secondIndex];
-        array2[secondIndex] = temp;
-     }
+
+    public static void swap(int[] array1, int[] array2, int indexOfFirstArray, int indexOfSecondArray) {
+        int temp = array1[indexOfFirstArray];
+        array1[indexOfFirstArray] = array2[indexOfSecondArray];
+        array2[indexOfSecondArray] = temp;
+    }
 }

@@ -30,7 +30,6 @@ public class BouquetInMinDays {
         while (start <= end) {
             int mid = start + (end - start) / 2;
 
-
             // If it's possible to make m bouquets at the current day,
             // it might also be possible that a smaller solution exists on the right of the current day
             if (possible(array, mid, m, k)) {
