@@ -7,9 +7,13 @@ class CapacityToShipInGivenDays {
         System.out.println(shipWithinDays(weights, days));
     }
 
+    /**
+     * @param weights
+     * @param days
+     * @return The minimum capacity of the ship such that it can ship all the products within given days
+     */
     public static int shipWithinDays(int[] weights, int days) {
         // Range: [max, sum]
-
         int start = Integer.MIN_VALUE;
         for (int weight : weights) {
             start = Math.max(weight, start);
@@ -23,7 +27,7 @@ class CapacityToShipInGivenDays {
         while (start <= end) {
             int mid = start + (end - start) / 2;
 
-            if (noOfDays(weights, mid) <= days) { // A possible ans
+            if (noOfDays(weights, mid) <= days) { // A possible answer
                 // But smaller answer may lie on the left of mid
                 end = mid - 1;
             } else {
