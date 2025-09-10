@@ -1,14 +1,10 @@
 package com.ojas.dsa.searching.binary.questions;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Spliterator;
-
 class KthMissingPositiveNumber {
 
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4};
-        System.out.println(findKthPositive());
+        System.out.println(findKthPositive(array, 3));
     }
 
 
