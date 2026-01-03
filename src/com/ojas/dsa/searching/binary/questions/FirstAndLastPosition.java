@@ -9,7 +9,6 @@ public class FirstAndLastPosition {
         int target = 7;
         int[] result = FirstAndLastPosition.searchRange(nums, target);
         System.out.println(Arrays.toString(result));
-
     }
 
     private static int[] searchRange(int[] nums, int target) {
