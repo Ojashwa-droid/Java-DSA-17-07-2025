@@ -1,13 +1,12 @@
 package com.ojas.dsa.arrays;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class MoveZeroes {
     public static void main(String[] args) {
         int[] nums = {1, 0, 2, 3, 2, 0, 0, 4, 5, 1};
         moveZeroesV2(nums);
+
     }
 
     public static void moveZeroes(int[] nums) {
