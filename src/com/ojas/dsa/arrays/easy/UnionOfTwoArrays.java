@@ -1,6 +1,5 @@
-package com.ojas.dsa.arrays;
+package com.ojas.dsa.arrays.easy;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class UnionOfTwoArrays {

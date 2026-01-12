@@ -1,4 +1,4 @@
-package com.ojas.dsa.arrays;
+package com.ojas.dsa.arrays.easy;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,12 +6,15 @@ import java.util.Map;
 // For Positive numbers only
 public class LongestSubArraySumPos {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 1, 1, 1, 1, 4, 2, 3};
-        int k = 3;
-        System.out.println(findLongestSubArrayLengthV3(arr, k));
+        int[] arr = {1};
+        int k = 0;
+//        System.out.println(findLongestSubArrayLengthV3(arr, k));
+        System.out.println(findLongestSubArrayLengthV2(arr, 3));
     }
 
-
+    // Optimal approach using "Sliding Window"
+    // Works only for positives and zeroes in the array
+    // Breaks in case a -ve is encountered in the array
     public static int findLongestSubArrayLengthV3(int[] arr, int k){
         int left = 0;
         int right = 0;
@@ -35,12 +38,10 @@ public class LongestSubArraySumPos {
 
             right++;
         }
-
-
         return maxLength;
     }
 
-
+    // Brute Force - O(N*N)
     public static int findLongestSubArrayLength(int[] arr, int k) {
         int maxLength = 0;
         int n = arr.length;
@@ -60,6 +61,7 @@ public class LongestSubArraySumPos {
     }
 
     // Using prefix sum - #Hashing
+    // Handles zeroes, positives and negatives
     public static int findLongestSubArrayLengthV2(int[] arr, int k) {
         int prefixSum = 0;
         int maxLength = 0;

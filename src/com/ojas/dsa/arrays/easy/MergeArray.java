@@ -1,4 +1,4 @@
-package com.ojas.dsa.arrays;
+package com.ojas.dsa.arrays.easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package com.ojas.dsa.arrays;
+package com.ojas.dsa.arrays.easy;
 
 public class MissingNumber {
     public static void main(String[] args) {
