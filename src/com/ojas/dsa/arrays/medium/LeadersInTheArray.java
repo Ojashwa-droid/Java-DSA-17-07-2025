@@ -17,8 +17,8 @@ public class LeadersInTheArray {
         List<Integer> list = new ArrayList<>();
         list.add(prevLeader);
 
-        for (int i = n - 2; i >= 0; i--){
-            if (arr[i] > prevLeader){
+        for (int i = n - 2; i >= 0; i--) {
+            if (arr[i] > prevLeader) {
                 prevLeader = arr[i];
                 list.add(arr[i]);
             }
