@@ -1,12 +1,28 @@
 package com.ojas.dsa.arrays.hard;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
 public class CountSubArraysWithXORAsK {
     public static void main(String[] args) {
         int[] nums = {4, 2, 2, 6, 4};
-        System.out.println(countSubArrays(nums, 6));
+//        System.out.println(countSubArrays(nums, 6));
+
+
+
+        int[][] arr = {
+                {1,3},
+                {5,6},
+                {2,6},
+                {2,4}
+        };
+        Arrays.sort(arr, Comparator.<int[]>comparingInt(row -> row[0])
+                .thenComparingInt(row -> row[1]));
+        for (int[] row : arr) {
+            System.out.println(Arrays.toString(row));
+        }
 
     }
 
