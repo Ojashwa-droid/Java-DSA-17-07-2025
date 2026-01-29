@@ -21,7 +21,6 @@ public class MergeOverlappingSubIntervals {
         for (int[] row : mergedIntervals) {
             System.out.println(Arrays.toString(row));
         }
-
     }
 
     public static int[][] mergeV2(int[][] intervals) {
