@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CountInversions {
-    static int count = 0;
 
     public static void main(String[] args) {
         int[] arr = {5, 3, 2, 4, 1};
@@ -12,30 +11,33 @@ public class CountInversions {
     }
 
     public static int countInversePairs(int[] arr) {
-        mergeSort(arr, 0, arr.length - 1);
+        int count = mergeSort(arr, 0, arr.length - 1);
         return count;
     }
 
     // Main function that sorts arr[low...high] using merge()
-    public static void mergeSort(int[] arr, int low, int high) {
+    public static int mergeSort(int[] arr, int low, int high) {
+        int count = 0;
         if (low < high) {
             // Find the middle point
             int mid = low + (high - low) / 2;
 
             // Sort first and second halves
-            mergeSort(arr, low, mid);
-            mergeSort(arr, mid + 1, high);
+            count += mergeSort(arr, low, mid);
+            count += mergeSort(arr, mid + 1, high);
 
             // Merge the sorted halves
-            merge(arr, low, mid, high);
+            count += merge(arr, low, mid, high);
         }
+        return count;
     }
 
-    private static void merge(int[] arr, int low, int mid, int high) {
+    private static int merge(int[] arr, int low, int mid, int high) {
         int left = low;
         int right = mid + 1;
         List<Integer> tempList = new ArrayList<>();
 
+        int count = 0;
         while (left <= mid && right <= high) {
             if (arr[left] <= arr[right]) {
                 tempList.add(arr[left]);
@@ -61,5 +63,6 @@ public class CountInversions {
         for (int i = low; i <= high; i++) {
             arr[i] = tempList.get(i - low);
         }
+        return count;
     }
 }
