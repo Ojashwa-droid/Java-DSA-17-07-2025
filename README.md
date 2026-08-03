@@ -87,3 +87,23 @@ I believe that **consistency beats intensity**. This repo is my way of:
 
 
 
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Hash Table
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/Ojashwa-droid/Java-DSA-17-07-2025/tree/master/0146-lru-cache) |
+## Linked List
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/Ojashwa-droid/Java-DSA-17-07-2025/tree/master/0146-lru-cache) |
+## Design
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/Ojashwa-droid/Java-DSA-17-07-2025/tree/master/0146-lru-cache) |
+## Doubly-Linked List
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/Ojashwa-droid/Java-DSA-17-07-2025/tree/master/0146-lru-cache) |
+<!---LeetCode Topics End-->
